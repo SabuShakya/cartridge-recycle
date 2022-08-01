@@ -22,7 +22,18 @@ public class CartridgeRecycle {
             return cartridges;
         }
 
-        tempMaxPerks = cartridges / 2;
+        max = getMaxPossibleFromUpperRange(cartridges, dollar, recycleReward, perkCost, max);
+
+        if (max == 0) {
+            tempMaxPerks = (cartridges / 2) - 1;
+            max = getMaxPossibleFromLowerRange(cartridges, dollar, recycleReward, perkCost, tempMaxPerks, max);
+        }
+
+        return max;
+    }
+
+    private int getMaxPossibleFromUpperRange(int cartridges, int dollar, int recycleReward, int perkCost, int max) {
+        int tempMaxPerks = cartridges / 2;
         while (tempMaxPerks <= cartridges) {
             if (isMaxPerksPossible(cartridges, dollar, recycleReward, perkCost, tempMaxPerks)) {
                 max = tempMaxPerks;
@@ -31,12 +42,6 @@ public class CartridgeRecycle {
             }
             tempMaxPerks = tempMaxPerks + 1;
         }
-
-        if (max == 0) {
-            tempMaxPerks = (cartridges / 2) - 1;
-            max = getMaxPossibleFromLowerRange(cartridges, dollar, recycleReward, perkCost, tempMaxPerks, max);
-        }
-
         return max;
     }
 
