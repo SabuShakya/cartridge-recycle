@@ -1,6 +1,5 @@
 package com.cartridgerecycle;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -72,5 +71,12 @@ class CartridgeRecycleTest {
         int actualMaxPerks = cartridgeRecycle.maxPerks(12, 0, 4, 3);
 
         assertEquals(6, actualMaxPerks);
+    }
+
+    @Test
+    void testIsMaxPerksValidForCase5() {
+        int actualMaxPerks = cartridgeRecycle.maxPerks(10, 10, 1, 4);
+
+        assertEquals(4, actualMaxPerks);
     }
 }

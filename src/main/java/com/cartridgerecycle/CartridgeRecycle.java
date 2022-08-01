@@ -49,7 +49,6 @@ public class CartridgeRecycle {
         while (tempMaxPerks != 0) {
             if (isMaxPerksPossible(cartridges, dollar, recycleReward, perkCost, tempMaxPerks)) {
                 max = tempMaxPerks;
-            } else {
                 break;
             }
             tempMaxPerks = tempMaxPerks - 1;
