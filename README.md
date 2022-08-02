@@ -18,3 +18,6 @@ If the person recycles 3 cartridges he has 7 cartridges and 16 dollars (10 initi
 
 Combining 7 cartridges and 14 dollars to buy 7 perk items(as each item costs 1 cartridge and 2 dollars(perksCost)), 
 max perks that can be bought is 7.
+
+Possible Solution's Flow Diagram:
+https://drive.google.com/file/d/1hQxT-MQuCAweZLOJCOO_J08a48txNEve/view
